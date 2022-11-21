@@ -30,6 +30,15 @@ $(document).ready(function () {
     showCards(movies);
   });
 
+  $('#search-keyword').keypress(async function (target) {
+    const searchKeyword = $('#search-keyword').val();
+    if (target.key === 'Enter') {
+      $('#search-keyword').val('');
+      const movies = await getMovies(searchKeyword);
+      showCards(movies);
+    }
+  });
+
   function getMovies(searchKeyword) {
     return fetch('https://www.omdbapi.com/?apikey=1b229f84&s=' + searchKeyword)
       .then((response) => response.json())
