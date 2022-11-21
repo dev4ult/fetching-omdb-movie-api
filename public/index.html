@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Testing OMDb API</title>
+  </head>
+  <body class="bg-zinc-900">
+    <main class="container mx-auto py-20 max-w-6xl px-4">
+      <h1 class="text-6xl font-semibold text-white w-fit">Movie DB</h1>
+      <p class="text-white text-xl mt-2">First time playing with API (OMDb API), try to search for a movie.</p>
+      <div class="flex mb-10 mt-5">
+        <input id="search-keyword" type="text" class="focus:outline-none text-2xl px-3" />
+        <button id="search-btn" type="submit" class="bg-zinc-800 p-1.5">
+          <img src="image/logo/search-btn.svg" alt="search button" class="w-10" />
+        </button>
+      </div>
+
+      <div id="movies-container" class="grid grid-cols-5 gap-4"></div>
+      <div id="detail"></div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
